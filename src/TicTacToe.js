@@ -10,7 +10,8 @@ function TicTacToe() {
 
   let { board, setBoard } = useContext(BoardContext);
   let [player, setPlayer] = useState("O");
-  let steps = 0;
+  let [steps,setSteps]=useState(0);
+  // let steps = 0;
 
   let checkWinner = (board) => {
     const lines = [
@@ -98,12 +99,13 @@ function TicTacToe() {
                       if (draftState[rowIndex][colIndex] === -1) {
                         draftState[rowIndex][colIndex] = player;
                       }
-
+                      
                     });
-                    steps++;
                     setBoard(updated);
+                    setSteps(steps+1);
+                    //setState return a promise so it is not updated instantly so when steps are checked steps value is not updated so it starts from zero and go till 8.
                     let answer = checkWinner(updated);
-                    if (answer === null && steps === 9) {
+                    if (answer === null && steps === 8) {
                       window.alert(
                         "Unfortunately the game is Tied. Try once more ! :)"
                       );
