@@ -1,3 +1,6 @@
+# Tic-Tac-Toe Game using React
+I have created a simple tic-tac-toe game using react.js . This project is live at https://hopeful-varahamihira-bf0a22.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
